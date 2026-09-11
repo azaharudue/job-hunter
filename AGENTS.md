@@ -30,6 +30,7 @@ This registry lists job boards and portals the `job-hunter` agent searches. Resp
 - **join.com** (join.com) — startup/scaleup product companies
 - **jobijoba**, **jobborse24** — meta-search
 - **Personio / Workable / Greenhouse company career pages** — direct product-company listings
+- **freehire.me** (freehire.me) — Greenhouse-sourced aggregator, useful for discovering product companies running on Greenhouse
 - **DataBerlin**, **RemoteRocketship** — curated tech boards
 
 ## Country → boards mapping (default: Germany)
