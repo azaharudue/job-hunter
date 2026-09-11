@@ -32,7 +32,7 @@ job-hunter/joblists/                # output: DAILY-JOB-BRIEFING-*.html + DAILY-
 | Component | Responsibility |
 |---|---|
 | **Role tiering** | Tier 1 (Applied/GenAI/LLM/RAG/AI-Product Engineer) weighted over Tier 2 (Full-Stack/Backend AI); consultancies, Data-Sci-only and Staff/Principal roles excluded |
-| **Hard filters** | Geography, work model (remote-first), salary floor, **product-companies only**, sector allow-list (no banking/insurance/riba), seniority mix 70/20/10, freshness < 7 days |
+| **Hard filters** | Geography, work model (remote-first), salary floor, **product-companies only**, configurable sector allow/deny list (default: no banking/insurance/gambling), seniority mix 70/20/10, freshness < 7 days |
 | **Verification gate** | Every lead is re-opened on its **source board** (not the aggregator). Country, salary band, posting date, deadline and company type confirmed before scoring; rejections logged with reasons |
 | **Scoring rubric** | +40 stack/tier match · +20 salary · +15 location/work-model · +15 AI relevance · +10 company fit |
 | **Deliverable** | Self-contained `DAILY-JOB-BRIEFING-YYYY-MM-DD.html` — inline CSS, summary table of the 30 most recent verified leads, per-job fit/gap cards, verification notes, relocation section |
@@ -119,7 +119,7 @@ job-hunter-agent/
 ├── agent/
 │   └── job-hunter.md      ← canonical agent spec (the deliverable)
 ├── profiles/
-│   └── PROFILE.md         ← candidate profile (one-file targeting)
+│   └── PROFILE.example.md  ← template; copy to PROFILE.md and fill in
 ├── AGENTS.md              ← job-board registry + crawling notes
 └── scripts/
     ├── job-hunt-daily.sh  # cron/UNIX runner
@@ -128,7 +128,7 @@ job-hunter-agent/
 
 ## License
 
-MIT — use it, fork it, teach your own agent fleet to do its job.
+AGPL-3.0 — see [LICENSE](LICENSE). Use it, fork it, teach your own agent fleet to do its job.
 
 ---
 

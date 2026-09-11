@@ -1,6 +1,9 @@
 # Generated output (per-run briefings & logs)
 joblists/
 
+# Personal candidate profile (use PROFILE.example.md as template)
+profiles/PROFILE.md
+
 # OS / editor
 .DS_Store
 Thumbs.db

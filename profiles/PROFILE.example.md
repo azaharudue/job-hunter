@@ -32,7 +32,7 @@ experience_years: 5
 - salary_min: 70000–90000 EUR+ (flag below-target only if unusually strong)
 - company_type: product companies only (no consultancies/agencies/staffing)
 - sector_allow: software products/SaaS, platform, deep-tech, healthcare software, climate/energy, compliance automation, education
-- sector_deny: banking, lending, credit, insurance, riba-based products  # halal — edit or remove as you see fit
+- sector_deny: banking, lending, credit, insurance, gambling, adult content, weapons  # configurable — edit or remove as you see fit
 - seniority_mix: 70% mid, 20% senior/stretch, 10% exceptional entry
 
 ## Output
