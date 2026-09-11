@@ -1,0 +1,7 @@
+# Generated output (per-run briefings & logs)
+joblists/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
