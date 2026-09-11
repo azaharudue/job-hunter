@@ -8,3 +8,5 @@ profiles/PROFILE.md
 .DS_Store
 Thumbs.db
 *.swp
+# build artifacts
+go-gate/go-gate.exe
