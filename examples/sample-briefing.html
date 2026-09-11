@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Briefing — YYYY-MM-DD (illustrative, fake data)</title>
+<style>
+  :root {
+    --primary: #2563eb; --primary-light: #eff6ff; --text: #1f2937; --muted: #6b7280;
+    --border: #e5e7eb; --green: #059669; --amber: #d97706; --red: #dc2626; --bg: #f9fafb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; padding: 2rem 1rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; border-radius: 12px; padding: 2.5rem 2rem; margin-bottom: 2rem; }
+  header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  header p { opacity: 0.9; font-size: 0.95rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+  .meta-span { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; }
+  .fresh-badge { background: #065f46; color: #34d399; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 700; margin-left: 0.5rem; vertical-align: middle; }
+  .job-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 1.5rem; overflow: hidden; }
+  .job-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); border-left: 5px solid transparent; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+  .job-header.high { border-left-color: var(--green); }
+  .job-header.medium { border-left-color: var(--amber); }
+  .job-title { font-size: 1.15rem; font-weight: 700; }
+  .job-company { color: var(--primary); font-weight: 600; margin-top: 0.2rem; }
+  .score-badge { background: var(--primary-light); color: var(--primary); font-weight: 700; padding: 0.4rem 0.9rem; border-radius: 8px; font-size: 1.1rem; white-space: nowrap; }
+  .job-body { padding: 1.25rem 1.5rem; }
+  .details-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.5rem 1.5rem; margin-bottom: 1rem; }
+  .detail { font-size: 0.9rem; }
+  .detail .label { color: var(--muted); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; display: block; }
+  .detail .value { font-weight: 500; }
+  .detail a { color: var(--primary); word-break: break-all; }
+  .section-title { font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; margin: 0.9rem 0 0.4rem; }
+  .fit-list, .gap-list { list-style: none; }
+  .fit-list li, .gap-list li { font-size: 0.9rem; padding-left: 1.2rem; position: relative; margin-bottom: 0.25rem; }
+  .fit-list li::before { content: "\2022"; position: absolute; left: 0.3rem; color: var(--green); }
+  .gap-list li::before { content: "\2022"; position: absolute; left: 0.3rem; color: var(--amber); }
+  .why { background: var(--primary-light); border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.9rem; margin-top: 0.75rem; }
+  .why .label { font-weight: 700; color: var(--primary); }
+  .summary-table-wrap { overflow-x: auto; margin-bottom: 2rem; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; font-size: 0.9rem; }
+  th, td { padding: 0.75rem 0.9rem; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: #f3f4f6; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; color: var(--muted); }
+  tr:last-child td { border-bottom: none; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 2.5rem; padding-bottom: 1.5rem; }
+  .note { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  h2.section { font-size: 1.3rem; margin: 2rem 0 1rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Daily Job Briefing <span class="fresh-badge">SAMPLE</span></h1>
+  <p>Illustrative output &middot; fictional companies &amp; people &middot; shows the exact deliverable the agent produces daily</p>
+  <div class="meta">
+    <span class="meta-span">8 verified leads</span>
+    <span class="meta-span">Top: Acme AI 92/100</span>
+    <span class="meta-span">2 fresh (&lt;24h)</span>
+  </div>
+</header>
+
+<div class="note">
+  <strong>Verification notes.</strong> All leads reopened on their source boards. Rejected this run: Fictitious Consulting (services firm), Global Bank (sector deny-list), StaleCo (posting 3 months old, no hiring signal). nothing unverified included.
+</div>
+
+<h2 class="section">Ranked Summary</h2>
+<div class="summary-table-wrap">
+  <table>
+    <thead><tr><th>#</th><th>Company</th><th>Role</th><th>Posted</th><th>Match</th><th>Salary</th><th>Model</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Acme AI</td><td>Applied AI Engineer</td><td>Today</td><td>92</td><td>~90-110K</td><td>Hybrid</td></tr>
+      <tr><td>2</td><td>ExampleCloud</td><td>LLM Engineer</td><td>2d</td><td>85</td><td>~80-95K</td><td>Remote</td></tr>
+      <tr><td>3</td><td>SampleCorp</td><td>AI Fullstack Engineer</td><td>Today</td><td>81</td><td>~75-90K</td><td>Home office</td></tr>
+      <tr><td>4</td><td>TestHive</td><td>RAG Engineer</td><td>5d</td><td>74</td><td>~70-85K</td><td>Remote</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="section">Top Card</h2>
+<div class="job-card">
+  <div class="job-header high">
+    <div>
+      <div class="job-title">Applied AI Engineer <span class="fresh-badge">TODAY</span></div>
+      <div class="job-company">Acme AI — Berlin (fictional)</div>
+    </div>
+    <div class="score-badge">92/100</div>
+  </div>
+  <div class="job-body">
+    <div class="details-grid">
+      <div class="detail"><span class="label">Size</span><span class="value">~500 employees, Series C</span></div>
+      <div class="detail"><span class="label">Salary</span><span class="value">~90-110K EUR (est.)</span></div>
+      <div class="detail"><span class="label">Stack</span><span class="value">Python, FastAPI, LLM agents, RAG, evals</span></div>
+      <div class="detail"><span class="label">Posted</span><span class="value">Today (11h ago)</span></div>
+      <div class="detail"><span class="label">Apply</span><span class="value"><a href="#">stepstone example #000000</a></span></div>
+    </div>
+    <div class="section-title">Fit</div>
+    <ul class="fit-list"><li>Python + FastAPI = core profile match</li><li>Agentic + retrieval fits prior LLM work</li></ul>
+    <div class="section-title">Gaps</div>
+    <ul class="gap-list"><li>Prefer to verify interview process before applying</li></ul>
+    <div class="why"><span class="label">Why:</span> Exact Tier-1 stack, fresh posting, product company, halal-friendly sector. Apply within 24 hours.</div>
+  </div>
+</div>
+
+<div class="footer">
+  Generated by job-hunter daily run &middot; sample file for the repository &middot; fictional data only
+</div>
+
+</div>
+</body>
+</html>

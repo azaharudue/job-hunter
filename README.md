@@ -24,9 +24,10 @@ search  →  verify (source board, country, salary, posting date, company type) 
 
 ```
 job-hunter/agent/job-hunter.md      # the agent: role targeting, hard filters, scoring rubric
-job-hunter/profiles/PROFILE.md      # candidate profile (skills, region, salary, sector allow-list)
+job-hunter/profiles/PROFILE.md      # candidate profile (skills, region, salary, sector list) — gitignored
 job-hunter/AGENTS.md                # board registry (Indeed, LinkedIn, StepStone, kununu, …)
 job-hunter/joblists/                # output: DAILY-JOB-BRIEFING-*.html + DAILY-JOB-HUNT-LOG.md
+job-hunter/examples/                # sample briefing showing the deliverable
 ```
 
 | Component | Responsibility |
@@ -96,16 +97,14 @@ codex exec "Run your daily job-hunt routine now."
 
 ## Configure
 
-Edit `profiles/PROFILE.md` — one file controls targeting:
+Copy `profiles/PROFILE.example.md` → `profiles/PROFILE.md` and fill in your facts. Only override what differs from the agent defaults (targeting tiers, seniority mix, output paths are defined in `agent/job-hunter.md` itself):
 
 | Key | Example |
 |---|---|
-| `skills` | Python, FastAPI, React, TypeScript, Azure, Docker, Kubernetes, PostgreSQL, LLM/RAG/agentic |
+| `skills` | Python, FastAPI, React, TypeScript, Docker, LLM/RAG/agentic |
 | `region` | Germany, then EU |
-| `work_model` | 100% remote, max 50% office |
 | `salary_min` | €70,000–€90,000 |
-| `sector_allow` | software products, healthcare, climate/energy, compliance, education |
-| `seniority_mix` | 70% mid · 20% senior · 10% exceptional entry |
+| `sector_deny` | banking, lending, credit, insurance |
 
 Boards are registered in `AGENTS.md` (kununu included for company-size/culture/salary signals).
 

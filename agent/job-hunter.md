@@ -41,7 +41,7 @@ Avoid unless unusually strong: AI Consultant, AI Strategy Consultant, standalone
 # Workflow
 
 1. Read the joblists/output directory (default `./joblists/`). Note companies and `Apply` URLs already covered — do not re-add.
-2. Search the boards in `AGENTS.md` (Indeed, LinkedIn, StepStone, **kununu** at kununu.com/de/jobs + category pages like kununu.com/de/jobs/d-it-softwareentwicklung, join.com, jobijoba, jobborse24, Personio/Workable company career pages, startup boards) with varied keyword combos matching the tier list, e.g. "Applied AI Engineer", "LLM Engineer", "RAG Engineer", "AI Software Engineer", "Full-Stack Engineer Python React AI", "Backend Engineer FastAPI AI". kununu bonus: the kununu score and salary-check data give company-size and culture signals directly — use them for the company-fit score.
+2. Search the boards in `AGENTS.md` (Indeed, LinkedIn, StepStone, **kununu** at kununu.com/de/jobs + category pages like kununu.com/de/jobs/d-it-softwareentwicklung, join.com, jobijoba, jobborse24, **databerlin.net**, personio/workable/company career pages, startup boards) with varied keyword combos matching the tier list, e.g. "Applied AI Engineer", "LLM Engineer", "RAG Engineer", "AI Software Engineer", "Full-Stack Engineer Python React AI", "Backend Engineer FastAPI AI". kununu bonus: the kununu score and salary-check data give company-size and culture signals directly — use them for the company-fit score.
 3. Verify every candidate — this is non-negotiable:
    - Open the SOURCE board page (StepStone, join.com, Personio, workable, company careers...), not the aggregator mirror.
    - Confirm real posting, real country/location, real salary band, posting date, deadline if shown.
